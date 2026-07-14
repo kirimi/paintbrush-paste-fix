@@ -1,5 +1,7 @@
 # Paintbrush Paste Fix
 
+<img src="Assets/AppIcon.png" width="160" alt="Paintbrush Paste Fix app icon">
+
 Paintbrush Paste Fix is a tiny, local macOS menu bar utility that fixes cropped and oversized image pasting in Paintbrush 2.6 on Retina displays.
 
 Paintbrush 2.6 can misinterpret the relationship between an image's logical size and its 2× Retina pixel dimensions. A pasted screenshot or photo may therefore appear enlarged, offset, and limited to one quarter of the source image. This utility normalizes the clipboard image to a 1× bitmap before Paintbrush reads it.
@@ -60,6 +62,7 @@ make release
 - `Sources/PasteFixCore` — image scale detection and normalization.
 - `Sources/PaintbrushPasteFix` — menu bar app and clipboard monitoring.
 - `Tests/PasteFixCoreTests` — 1× and 2× image normalization tests.
+- `Assets` — application icon source and packaged `.icns` file.
 - `scripts` — universal app and release packaging.
 
 ## Known limitations

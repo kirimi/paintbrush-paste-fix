@@ -8,6 +8,8 @@
     <string>Paintbrush Paste Fix</string>
     <key>CFBundleExecutable</key>
     <string>PaintbrushPasteFix</string>
+    <key>CFBundleIconFile</key>
+    <string>AppIcon</string>
     <key>CFBundleIdentifier</key>
     <string>io.github.paintbrushpastefix</string>
     <key>CFBundleInfoDictionaryVersion</key>

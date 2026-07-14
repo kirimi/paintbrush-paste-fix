@@ -24,6 +24,11 @@ jobs:
       - name: Verify app signature
         run: codesign --verify --deep --strict --verbose=2 "dist/Paintbrush Paste Fix.app"
 
+      - name: Verify app icon
+        run: |
+          test -f "dist/Paintbrush Paste Fix.app/Contents/Resources/AppIcon.icns"
+          plutil -p "dist/Paintbrush Paste Fix.app/Contents/Info.plist" | grep '"CFBundleIconFile" => "AppIcon"'
+
       - name: Verify Universal binary
         run: |
           file "dist/Paintbrush Paste Fix.app/Contents/MacOS/PaintbrushPasteFix" | grep arm64

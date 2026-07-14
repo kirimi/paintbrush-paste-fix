@@ -2,6 +2,10 @@
 
 All notable changes to Paintbrush Paste Fix will be documented in this file.
 
+## Unreleased
+
+- Added a custom application icon for Finder and the Applications folder.
+
 ## 1.0.0 - 2026-07-14
 
 - Added automatic Retina clipboard image normalization for Paintbrush 2.6.

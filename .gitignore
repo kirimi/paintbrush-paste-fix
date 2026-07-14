@@ -3,6 +3,7 @@
 .cache/
 .home/
 .idea/
+Assets/AppIcon-source-green.png
 dist/
 *.xcuserstate
 xcuserdata/
