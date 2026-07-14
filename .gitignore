@@ -2,6 +2,7 @@
 .build/
 .cache/
 .home/
+.idea/
 dist/
 *.xcuserstate
 xcuserdata/
