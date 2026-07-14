@@ -2,7 +2,7 @@
 
 All notable changes to Paintbrush Paste Fix will be documented in this file.
 
-## Unreleased
+## 1.0.1 - 2026-07-14
 
 - Added a custom application icon for Finder and the Applications folder.
 
