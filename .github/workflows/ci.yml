@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test-and-build:
+    runs-on: macos-15
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Run tests
+        run: swift test --disable-sandbox
+
+      - name: Build Universal app
+        run: sh scripts/package-app.sh
+
+      - name: Verify app signature
+        run: codesign --verify --deep --strict --verbose=2 "dist/Paintbrush Paste Fix.app"
+
+      - name: Verify Universal binary
+        run: |
+          file "dist/Paintbrush Paste Fix.app/Contents/MacOS/PaintbrushPasteFix" | grep arm64
+          file "dist/Paintbrush Paste Fix.app/Contents/MacOS/PaintbrushPasteFix" | grep x86_64
